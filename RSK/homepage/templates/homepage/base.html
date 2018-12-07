@@ -1,0 +1,135 @@
+{% load staticfiles %}                          <!--The must file in the beginning of the Template file that loads all the static files to be loaded in the template.. It is a sort of loader -->
+<!DOCTYPE html>
+<html>
+<head>
+            <title>{% block Title %}{% endblock %} |  Renal Society Of Kashmir.</title>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="icon" type="image/gif/png" href="{% static 'homepage/icon.png' %}">
+            <link rel="stylesheet" href="{% static 'bootstrap 3/css/bootstrap.css' %}">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            {% block css %} {% endblock %}
+            <style type="text/css">
+                .footer  {
+                                background-color: #282b2f;
+                                color: #fbded6;
+                 }
+                 
+                .footer   a { color: #5f7682  ; }
+                .footer   a:hover { 
+                                                    color: #dd7b00  ; 
+                                                     text-decoration: none;   
+                  }
+                 
+
+            </style>
+             
+</head>
+<body>
+                  <header>      
+                    <nav class="navbar navbar-inverse">
+                      <div class="container-fluid">
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> 
+                          </button>
+                          <a class="navbar-brand" href="{% url 'Homepage' %}" style="color: #b6d3cc;">Renal Society Of Kashmir</a> 
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                          <ul class="nav navbar-nav">
+                           <li ><a href= "{% url 'Homepage' %}"> Home</a> </li>
+                           <li><a href="{% url 'contributions' %}">Contributions</a> </li>
+                           <li><a href="{% url 'donate' %}">Donate</a></li>
+                           <li><a href="{% url 'patients' %}">Register a Patient</a></li>
+                          </ul>
+                          <ul class="nav navbar-nav navbar-right">
+                            {% if user.is_authenticated %}
+                                <li> <a href= "{% url 'logout' %}"> Logout {{ user.username }} </a></li> 
+                            {% else %}
+                            <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            {% endif  %}
+                          </ul>
+                        </div>
+                      </div>
+                    </nav>
+
+                               </header>
+                                <!--Carousel -->
+                                    {% block carousel %}                   
+                                    {% endblock carousel %}
+
+                                <!--The body contains the body within the navbar and footer-->
+                                    {% block body %}
+                                    {% endblock %}
+
+
+
+                            <section id="footer" class="footer">
+                                <div class="container">
+                                    <div class="row text-center text-xs-center text-sm-left text-md-left">
+                                        <div class="col-xs-12 col-sm-4 col-md-4">
+                                            <h5>Navigate</h5>
+                                            <ul class="list-unstyled quick-links">
+                                                    <li><a href="{% url 'Homepage' %}">Home</a></li>
+                                                    <li><a href="{% url 'contributions' %}">Contribution</a></li>
+                                                    <li><a href="javascript:void();">FAQ</a></li>
+                                                    <li><a href="#">Register A Patient</a></li>
+                                                    <li><a href="{% url 'donate' %}">Donate</a></li>
+                                            </ul>
+                                        </div>
+                                        {% if user.is_authenticated %}
+                                        {% else %}
+                                        <div class="col-xs-12 col-sm-4 col-md-4">
+                                            <h5>Accounts.</h5>
+                                            <ul class="list-unstyled quick-links">
+                                                    <li><a href="{% url 'register' %}">Register</a></li>
+                                                    <li><a href="{% url 'login' %}">Log in</a></li>
+                                                    <li><a href="javascript:void();">Forgotten Password?</a></li>
+                                            </ul>
+                                        </div>
+                                        {% endif %}
+                                        <div class="col-xs-12 col-sm-4 col-md-4">
+                                                <h5>Suggestions/Queries, <br>Contact Admin!</h5>
+                                                <hr width="80%" style="margin-top: -1%;">
+                                                <hr width="70%" style="margin-top: -5%;">
+                                                <p style="white-space: pre; margin-top: -3%;" >admin: Zahid Khan <br>phone : +91 8491986924.<br>email : xahiidkhan@gmail.com
+                                                </p>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 mt-12 mt-sm-12">
+                                            <ul class="list-unstyled list-inline social text-center">
+                                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                                                <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        </hr>
+                                    </div>  
+
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                                                <p>Society Of Kashmir is a non-profit organisation whose purpose is to provide possible help to the needy.</p>
+                                                <p class="h6">&copy All right Reversed <a class="text-green ml-2" href="https://www.facebook.com/v1rus.911" target="_blank">Zahid Khan</a></p>
+                                        </div>
+                                                </hr>
+                                    </div>  
+                                </div>       <!--Container-->
+                            </section>
+                               <!-- ./Footer -->
+
+
+                        <!--End Attachment for faster and better results-->
+                        <script src="{% static 'bootstrap 3/jquery/jquery.js' %}"></script> 
+                        <script src="{% static 'bootstrap 3/jquery/smoothscroll.js' %}"></script> 
+                        <script type="text/javascript" src="{% static 'bootstrap 3/js/bootstrap.min.js' %}"></script>      
+                       <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+                        {% block javascript %}              <!--Javascript addon, Each application contain its javascript code -->
+                        
+                        {% endblock %}
+</body>
+</html> 

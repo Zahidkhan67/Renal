@@ -1,0 +1,94 @@
+<!--This is for the login of the authorised users -->
+<!-- WWW.ZEE.COM/accounts/Login-->
+{% extends  'homepage/base.html'  %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block Title %} Login {% endblock %}
+{% block css %} 
+                         <style type="text/css">
+                               #LogImage{
+                                          margin-bottom:  2%;
+                                          margin-top: 8%;
+                               }
+                               #UIForm{
+                                          /*background-color: #F8F8F8;                     */
+                                          margin-top: -3.1%; 
+                                          margin-bottom:  0.5%; 
+                                          border-top: 9px solid  #505050; 
+                                          border-bottom: 10px solid  #505050;
+                                          border-left: 1px solid #404040;
+                                          border-right: 1px solid #404040;
+                                          border-radius: 15px 15px ;
+                               }
+                         </style>
+{% endblock %}
+ {% block body %}
+<div class="container">
+                          <div class="col-md-6 col-md-offset-3"> 
+                                        <div class="container-fluid"  id = "UIForm" >
+                                                <div class="panel panel-login">
+                                                            <div class="panel-body">
+                                                                        <div class="row">
+                                                                                    <div class="col-lg-12">
+                                                                                        <img src="{% static 'accounts/images/1.png' %}" alt="Image1" width="250" height="250" id="LogImage"class="img-responsive  center-block"  >
+                                                                                        <hr/>    
+                                                                                             {% if form.errors %}
+                                                                                                    {% for field in form %}
+                                                                                                        {% for error in field.errors %}
+                                                                                                            <div class="alert alert-danger">
+                                                                                                                <strong>{{ error|escape }}</strong>
+                                                                                                            </div>
+                                                                                                        {% endfor %}
+                                                                                                    {% endfor %}
+                                                                                                    {% for error in form.non_field_errors %}
+                                                                                                        <div class="alert alert-danger">
+                                                                                                            <strong>{{ error|escape }}</strong>
+                                                                                                        </div>
+                                                                                                    {% endfor %}
+                                                                                                {% endif %}                     
+                                                                                                <form id="login-form" action= "{% url 'LogFileFirst' %}" method="post" role="form">
+                                                                                                             {% csrf_token %}
+                                                                                                            <div class="input-group">
+                                                                                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                                                                                         {{ form.username|add_class:'form-control' }}
+                                                                                                           </div>
+                                                                                                            <div class="input-group" style="margin-top:10px;">
+                                                                                                                              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                                                                                              {{ form.password|add_class:'form-control' }}                                                                                                                    
+                                                                                                            </div>
+                                                                                                            <hr>
+                                                                                                            <div class="form-group text-center">
+                                                                                                                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                                                                                                        <label for="remember"> Remember Me</label>
+                                                                                                            </div>
+
+                                                                                                            <div class="form-group">
+                                                                                                                        <div class="row">
+                                                                                                                                    <div class="col-sm-6 col-sm-offset-3">
+                                                                                                                                                <button type="submit" class="btn btn-primary btn-block"  value="login">Submit </button>
+                                                                                                                                    </div>
+                                                                                                                        </div>
+                                                                                                            </div>
+                                                                                                            <div class="form-group">
+                                                                                                                        <div class="row">
+                                                                                                                                    <div class="col-lg-12">
+                                                                                                                                                <div class="text-center">
+                                                                                                                                                            <a  tabindex="5" class="forgot-password">Forgot Password?</a>
+                                                                                                                                                </div>
+                                                                                                                                    </div>
+                                                                                                                        </div>
+                                                                                                            </div>
+                                                                                                </form>
+                                                                                                     <div class="col-xs-14 col-sm-12" style="color: rgb(223, 58, 84); ">
+                                                                                                               <a class="google btn" href="{% url 'social:begin' 'google-oauth2' %}" aria-hidden="true" style="font-size:16px; text-decoration: none;">
+                                                                                                                          <i class="fa fa-google fa-fw"></i> Login with Google+
+                                                                                                               </a>
+                                                                                                     </div>  
+                                                                                    </div>
+                                                                        </div>
+                                                            </div>
+                                                </div>
+                                    </div>
+                              </div>
+                        </div>
+                  {% endblock %}

@@ -1,0 +1,61 @@
+{% extends  'homepage/base.html'  %}
+{% load staticfiles %}
+                        <!--TITLE-->
+                  {% block Title %}Help {% endblock %}
+                  {% block css %}
+                        <style type="text/css">
+                                    .btn {
+                                                background-color: #808080;
+                                                border: 20px solid #808080;
+                                                padding-left : 30px ;
+                                                padding-right : 30px ;
+                                                margin-left: 10px;
+                                                margin-top: 30px;
+                                    }
+                                    .btn:hover{
+                                                background-color :  #756e81;
+                                                border: 18px solid #756d91;
+                                    }
+                                    #funds{
+                                                margin-top: 13%; 
+                                                border-left: 1px solid #3a73a9;
+                                    }
+                        </style>
+                  {% endblock %}
+                                    <!--BODY STARTS FROM HERE -->
+                  {% block body %}
+                        <div class="container-fluid">
+                                    <div class="jumbotron" style="background-color: white">
+                                                <h1 align="center">How can you help?</h1> 
+                                                <h5 align="center"><q>You have not lived today until you have done something for someone who can never repay you.</q></h5>
+                                    </div>
+                        </div>
+                        <hr>
+                        <div class="container-fluid text-center">    
+                                    <div class="col-sm-6" >
+                                                <img src="{% static 'donate/Images/lift.png' %}" class="img-responsive" style="height:80%; " alt="Image" >
+                                                <h3>Drop On The Way! <b>Earn Jannah </b></h3>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-4" > 
+                                                <img src="{% static 'donate/Images/ads.png' %}" class="img-responsive"  alt="Ads" width="300px">
+                                                <h3 align="left" style="padding-left: 8%"><b>Watch Free Ad(s)</b></h3>    
+                                    </div>
+                        <div class="well well-md col-sm-12" align="center"><h4>There are ways to support us. Decide what's best for you.</h4></div>
+                                    <div class="col-sm-6">
+                                              <img src="{% static 'donate/Images/kidneydonor.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+                                                <h2>Be Legend <br> <b>Donate Organ.</b></h4>
+                                    </div>
+                                    <div class="col-sm-6" id="funds">
+                                                <h3><b>SELECT YOUR DONATION AMOUNT : </b></h3>    
+                                                   <button type="button" class="btn btn-primary">Rs. 50. </button>
+                                                   <button type="button" class="btn btn-primary">Rs. 100.</button>
+                                                    <button type="button" class="btn btn-primary">Rs. 200.</button>
+                                                    <button type="button" class="btn btn-primary">Rs. 500.</button>
+                                                    <button type="button" class="btn btn-primary">Rs. 1,000.</button>
+                                                    <button type="button" class="btn btn-primary">Rs. 2,000.</button>
+                                                    <button type="button" class="btn btn-primary">Rs. 10,000.</button>
+                                    </div>
+                          </div>
+                        <hr>
+                  {% endblock %}

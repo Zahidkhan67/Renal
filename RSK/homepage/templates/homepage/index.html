@@ -1,0 +1,182 @@
+<!--O! Allah make it helpful for the needy and a source of Jannah to all the members readers and donors... Ameen! -->
+<!--www.zee.com/home-->
+{% extends  'homepage/base.html'  %}
+ {% load staticfiles %} 
+
+                        <!--TITLE-->
+                  {% block Title %} Renal Society Of Kashmir.{% endblock %}                  
+                 
+                   {% block css %}
+                        <style type="text/css">
+                                    #mainbody{
+                                        background-color: #ffece0;
+                                    }
+                        </style>
+                  {% endblock %}
+
+                 {% block carousel %}
+                             <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -1.4%">
+                                 <!-- Indicators -->
+                                 <ol class="carousel-indicators">
+                                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                   <li data-target="#myCarousel" data-slide-to="1"></li>
+                                   <li data-target="#myCarousel" data-slide-to="2"></li>
+                                   <li data-target="#myCarousel" data-slide-to="3"></li>
+                                 </ol>
+
+                                 <!-- Wrapper for slides -->
+                                 <div class="carousel-inner" role="listbox">
+                                   <div class="item active">
+                                     <img src="{% static 'homepage/1.jpg' %}" alt="Image1" >
+                                   </div>
+
+                                   <div class="item">
+                                     <img src="{% static 'homepage/2.jpg' %}" alt="Image2" >
+                                   </div>
+
+                                   <div class="item">
+                                     <img src="{% static 'homepage/3.jpg' %}" alt="Image3" >
+                                   </div>
+
+                                   <div class="item">
+                                     <img src="{% static 'homepage/4.jpg' %}" alt="Image4" >
+                                   </div>
+                                 </div>
+
+                                 <!-- Left and right controls -->
+                                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                   <span class="sr-only">Previous</span>
+                                 </a>
+                                 <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                   <span class="sr-only">Next</span>
+                                 </a>
+                               </div>
+                {% endblock %}
+
+                {% block body %}
+
+
+
+                <div class="container-fluid" id="mainbody" >
+                        <div class="jumbotron">
+                                <h1 align="center">Kidney Diseases Awareness!</h1> <hr>
+                                <p>if hypertension and diabetes is controlled in Kashmir the number of CKD patients would decrease by 70 percent.
+                                    Kashmir has become a home of hypertension and diabetes patients. Every family has one or two hypertension patients, which means that there is a risk of kidney disorder in every family,” Dr Bhat said.
+                                </p> 
+                          </div>
+
+                          <div class="jumbotron">
+                                <h3 align="center">Must Read Topics!</h3> 
+
+                                    <div class="row">
+                                      <div class="col-sm-8">
+                                            <a  href="#ADPKD" data-toggle="collapse"  class="btn" >
+                                                    <h3 align="left">Autosomal Dominant Polycystic Kidney Disease(AKPKD).</h3></a>
+                                            <a  href="#ADPKD" data-toggle="collapse"  class="btn" >
+                                                    <h3 align="left">Chronic kidney disease.</h3></a>
+                                        </div>
+                                      <div class="col-sm-4">
+                                            <a  href="#PKD" data-toggle="collapse"  class="btn "><h3 align="left"> Polycystic Kidney Disease (PKD) </h3></a>
+                                            <a  href="#PKD" data-toggle="collapse"  class="btn "><h3 align="left"> Acute Renal Failure </h3></a>
+                                        </div>
+                                      <div class="col-sm-4">
+                                      <a  href="#P" data-toggle="collapse"  class="btn "><h3 align="left"> Acute kidney injury </h3></a>
+                                  </div>
+                                    </div>
+
+
+                        <div class="container-fluid" >
+                        <div id="ADPKD" class="collapse">
+                             <p>
+                                                          Autosomal dominant polycystic kidney disease (ADPKD) is the most prevalent, potentially lethal, monogenic human 
+                                                          disorder.[1] It is associated with large interfamilial and intrafamilial variability, which can be explained to a large extent by 
+                                                          its genetic heterogeneity and modifier genes.[1] It is also the most common of the inherited cystic kidney diseases —
+                                                           a group of disorders with related but distinct pathogenesis, characterized by the development of renal cysts and
+                                                            various extrarenal manifestations, which in case of ADPKD include cysts in other organs, such as the liver,
+                                                             seminal vesicles, pancreas, and arachnoid membrane, as well as other abnormalities, such as intracranial aneurysms 
+                                                             and dolichoectasias, aortic root dilatation and aneurysms, mitral valve prolapse, and abdominal wall hernias.[1][2][3] Over 50%
+                                                              of patients with ADPKD eventually develop end stage kidney disease and require dialysis or kidney transplantation.[1][4] ADPKD
+                                                               is estimated to affect at least 1 in every 1000 individuals worldwide, making this disease the most common inherited kidney
+                                                                disorder with a diagnosed prevalence of 1:2000 and incidence of 1:3000-1:8000 in a global scale.
+                             </p>
+                             <hr>
+                        </div>
+                </div>                   
+
+
+                <div class="container-fluid">
+                            <div id="PKD" class="collapse" style="white-space: pre-line;">
+                                 What is polycystic kidney disease? <br/>
+                                 Polycystic kidney disease (also called PKD) causes numerous cysts to grow in the kidneys. These cysts are filled with fluid. If too many cysts grow or if they get too big, the kidneys can become damaged. PKD cysts can slowly replace much of the kidneys, reducing kidney function and leading to kidney failure.
+                                 How common is PKD?<br/>
+                                 In the United States about 600,000 people have PKD. It is the fourth leading cause of kidney failure. It is found in all races and occurs equally in men and women. It causes about 5% of all kidney failure.
+                                 What other organs besides the kidney are affected by PKD?
+                                 PKD can affect other organs besides the kidney. People with PKD may have cysts in their liver, pancreas, spleen, ovaries, and large bowel. Cysts in these organs usually do not cause serious problems, but can in some people. PKD can also affect the brain or heart. If PKD affects the brain, it can cause an aneurysm. An aneurysm is a bulging blood vessel that can burst, resulting in a stroke or even death. If PKD affects the heart, the valves can become floppy, resulting in a heart murmur in some patients.
+                                 What are the clues that someone has PKD?<br/>
+                                 Most people do not develop symptoms until they are 30 to 40 years old. The first noticeable signs and symptoms may include:
+                                 Back or side pain<br/>
+                                 An increase in the size of the abdomen<br/>
+                                 Blood in the urine<br/>
+                                 Frequent bladder or kidney infections<br/>
+                                 High blood pressure<br/>
+                                 High blood pressure is the most common sign of PKD. Occasionally, patients may develop headaches related to high blood pressure or their doctors may detect high blood pressure during a routine physical exam. Because high blood pressure can cause kidney damage, it is very important to treat it. In fact, treatment of high blood pressure can help slow or even prevent kidney failure.<br/>
+                                 Fluttering or pounding in the chest<br/>
+                                 About 25% of PKD patients have a so-called floppy valve in the heart, and may experience a fluttering or pounding in the chest as well as chest pain. These symptoms almost always disappear on their own but may be the first hint that someone has PKD.
+                                 How is PKD diagnosed?
+                                 Ultrasound is the most reliable, inexpensive and non-invasive way to diagnose PKD. If someone at risk for PKD is older than 40 years and has a normal ultrasound of the kidneys, he or she probably does not have PKD. Occasionally, a CT scan (computed tomography scan) and MRI (magnetic resonance imaging) may detect smaller cysts that cannot be found by an ultrasound. MRI is used to measure and monitor volume and growth of kidneys and cysts.
+                                 In some situations, genetic testing might also be done. This involves a blood test that checks for abnormal genes that cause the disease.  Genetic testing is not recommended for everyone. The test is costly, and it also fails to detect PKD in about 15% of people who have it. However, genetic testing can be useful when a person:  
+                                 has an uncertain diagnosis based on imaging tests
+                                 has a family history of PKD and wants to donate a kidney
+                                 is younger than 30-years old with a family history of PKD and a negative ultrasound, and is planning to start a family
+                                 Does everyone with PKD develop kidney failure?
+                                 No. About 50 percent of people with PKD will have kidney failure by age 60, and about 60 percent will have kidney failure by age 70. People with kidney failure will need dialysis or a kidney transplant. Certain people have an increased risk of kidney failure including:
+                                 men
+                                 patients with high blood pressure
+                                 patients with protein or blood in their urine
+                                 women with high blood pressure who have had more than three pregnancies
+                                 How is PKD treated?
+                                 At present, there is no cure for PKD. However, a lot of research is being done. Recent studies suggest that drinking plain water throughout the day and avoiding caffeine in beverages can slow the growth of cysts. Research is also helping us understand the genetic basis of PKD.
+                                 Studies also suggest that some treatments may slow the rate of kidney disease in PKD, but further research is needed before these treatments can be used in patients. In the meantime, many supportive treatments can be done to control symptoms, help slow the growth of cysts, and help prevent or slow down the loss of kidney function in people with PKD.  These include:
+                                 careful control of blood pressure
+                                 prompt treatment with antibiotics of a bladder or kidney infection
+                                 lots of fluid when blood in the urine is first noted
+                                 medication to control pain (talk to your doctor about which over-the-counter medicines are safe to take if you have kidney disease)
+                                 a healthy lifestyle with regard to smoking cessation, exercise, weight control and reduced salt intake
+                                 drinking lots of plain water throughout the day
+                                 avoiding caffeine in all beverages
+                                 Should people with PKD take a special diet?
+                                 At present, no specific diet is known to prevent cysts from developing in patients with PKD. Reducing salt intake helps control blood pressure in PKD patients who have high blood pressure. A diet low in fat and moderate in calories is recommended to maintain a healthy weight. Speak to your doctor or a dietitian about other changes to your diet, such as avoiding caffeine.
+                                 Is exercise recommended for people with PKD?
+                                 Absolutely. However, exercises that are potentially harmful to the kidney, such as contact sports, should be avoided. It is important not to become too dehydrated during any physical activity.
+                                 Who is at risk for developing PKD?
+                                 PKD runs in families. It is an inherited disorder that is passed from parents to children through genes. Genes are the basic elements of heredity. At conception, children receive a set of genes from each parent. They determine many characteristics such as hair color and eye color. Genes can also determine the likelihood of developing a disease.
+                                 A genetic disease can happen if one or both parents pass abnormal genes to a child. This happens through something called dominant inheritance or recessive inheritance.
+                                 Dominant inheritance
+                                 If one parent has the disease and passes an abnormal gene to the child, it is called dominant inheritance. Each child has a 50% chance of getting the disease. The risk is the same for every child, regardless of how many children develop the disease.
+                                 Recessive inheritance
+                                 If both parents carry the abnormal gene, and both parents pass an abnormal gene to the child, it is called recessive inheritance. In this situation, every child has a 25% chance of getting the disease.
+                                 Are there different types of PKD?
+                                 Yes. The three main types of PKD are:
+                                 Autosomal Dominant PKD
+                                 (also called PKD or ADPKD)
+                                 This form of the disease is passed from parent to child by dominant inheritance. In other words, only one copy of the abnormal gene is needed to cause the disease. Symptoms usually begin between the ages of 30 and 40, but they can begin earlier, even in childhood. ADPKD is the most common form of PKD. In fact, about 90 percent of all PKD cases are ADPKD.
+                                 Infantile or Autosomal Recessive PKD
+                                 (also called ARPKD)
+                                 This form of the disease is passed from parent to child by recessive inheritance. Symptoms can begin in the earliest months of life, even in the womb. It tends to be very serious, progresses rapidly, and is often fatal in the first few months of life. This form of ARPKD is extremely rare. It occurs in 1 out of 25,000 people.
+                                 Acquired Cystic Kidney Disease
+                                 (also called ACKD)
+                                 ACKD can happen in kidneys with long-term damage and severe scarring, so it is often associated with kidney failure and dialysis. About 90 percent of people on dialysis for 5 years develop ACKD. People with ACKD usually seek help because they notice blood in their urine. This is because the cysts bleed into the urinary system, which discolors urine.
+                                 Should people with PKD have children?
+                                 Individuals with PKD who are concerned about passing the disease to their children may want to consult a genetics counselor to help them with family planning. Many university medical centers have this service.
+                                 Should women with PKD get pregnant?
+                                 Most of the women with PKD (80 percent) have successful and uneventful pregnancies. However, some women with PKD have an increased risk for serious complications for themselves and their babies. This includes women with PKD who also have:
+                                 high blood pressure
+                                 decreased kidney function
+                                 Women who have PKD with high blood pressure develop pre-eclampsia (or toxemia) in 40 percent of pregnancies. This is a life-threatening disorder for both the mother and baby, and it can develop suddenly and without warning. Therefore, all women with PKD, particularly those who also have high blood pressure, should be followed closely during their pregnancy by their doctor.       
+                               </div>
+                        </div>
+                      </div>
+                    </div>
+                        {% endblock %}

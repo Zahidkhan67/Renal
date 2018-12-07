@@ -1,0 +1,63 @@
+<!--O! Allah make it helpful for the needy and a source of Jannah to all the members readers and donors... Ameen! -->
+<!--www..com/patients-->
+{% extends  'homepage/base.html'  %}
+                        <!--TITLE-->
+                  {% block Title %} Patients RSK.{% endblock %}
+                  {% block body %}
+                  <!--Successful insertion of a Patient -->
+                  {% if messages %}
+                  <div align="center" class="container-fluid" id="Successful">
+                  <ul class="alert alert-success fade in alert-dismissible" >
+                      {% for message in messages %}
+                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                              <p {% if message.tags %} "{% endif %}>{{ message }}</p>
+                      {% endfor %}
+                  </ul>
+                  {% endif %}
+              </div>
+                        <div class="container">
+                             <form method="POST" class="post-form" action="{% url 'submit' %}">
+                                    {% csrf_token %}
+                                    <div class="form-group "> <!-- Full Name -->
+                                                <label for="Username" class="control-label">Name of Patient!</label>
+                                                <input type="text" class="form-control" id="Username" name="Username" placeholder="Example : Mr. Ayoub Ahmad." pattern="[a-zA-Z].{4,20}" title="Enter the name of Patient here." required>
+                                    </div>      
+                                    <div class="form-group"> <!-- Street Address in case of verification -->
+                                                <label for="street1_id" class="control-label"> Home address! </label>
+                                                <input type="text" class="form-control" id="street1_id" name="Street" placeholder="Example :  Qazi Mohalla RawalPora," pattern="[a-zA-Z0-9].{1,20}"  required>
+                                    </div>                                                      
+                                    
+                                        <div class="form-group"> <!-- District To Which He Belong -->
+                                                <label for="state_id" class="control-label">District / Tehsil!</label>
+                                                <select class="form-control" id="state_id" name='District'>
+                                                            <option value="Srinagar">Srinagar</option>
+                                                            <option value="Ganderbal">Ganderbal</option>
+                                                </select>                                                   
+                                         </div>
+                                         <div class="form-group"> <!-- Phone Number In Case Not in Reach-->
+                                                <label for="Phone_Number" class="control-label">Valid Contact Number : </label>
+                                                <input type="number" class="form-control" id="Phone_Number" name="Phone" pattern="[0-9].{10,13}" placeholder="Example : 9906012345."  required>
+                                    </div>
+                                    <div class="container-fluid">
+                                            <ul>
+                                                <li><span class="help-block">Fields must be within 20 characters with no special symbol. </span></li>
+                                            </ul>
+                                    </div>
+                                        <div class="form-group"> <!-- Submit Button -->
+                                                <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Click To Submit.!"> Submit!</button>
+                                        </div>                 
+                                        
+                                </form>  
+                             </div>    
+                                   <hr>
+                  {% endblock %}                  
+                  {% block javascript %}
+                        <script>
+                        $(document).ready(function(){
+                                      $('[data-toggle="tooltip"]').tooltip();   
+                          });
+                        </script>  
+                    {% endblock javascript %}
+                                    
+                                    
+                               
